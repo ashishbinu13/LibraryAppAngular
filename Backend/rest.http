@@ -1,0 +1,22 @@
+POST http://localhost:3030/auth/register
+Content-Type: application/json
+
+{
+    "lastName": "Sample",
+    "firstName": "Sample",
+    "userName" : "Sample",
+    "email" : "em@email.com",
+    "mobile" : "9744682287",
+    "password" : "Password123",
+    "confirmPassword" : "Password123"
+}
+
+###
+
+POST http://localhost:3030/auth/login
+Content-Type: application/json
+
+{
+    "email" : "em@email.com",
+    "password" : "Password123"
+}
