@@ -1,0 +1,102 @@
+<div class="container-fluid">
+  <div class="row main-content bg-success text-center">
+    <div class="col-md-4 text-center company__info">
+      <span class="company__logo"
+        ><h2><fa-icon [icon]="fabook" class="fa-5x"></fa-icon></h2
+      ></span>
+      <h3 class="company_title">
+        Welcome to the Library.<br /><small>Happy Reading!</small>
+      </h3>
+    </div>
+    <div class="col-md-8 col-xs-12 col-sm-12 login_form">
+      <div class="container-fluid">
+        <div class="row">
+          <h2>Create your Account</h2>
+        </div>
+        <div class="row">
+          <!-- ---------- -->
+
+          <form [formGroup]="registerForm" (ngSubmit)="submit()">
+            <div class="row">
+              <input
+                formControlName="firstName"
+                type="text"
+                name="fname"
+                class="form__input"
+                placeholder="First Name"
+              />
+            </div>
+
+            <div class="row input_row">
+              <input
+                formControlName="lastName"
+                type="text"
+                name="lname"
+                class="form__input"
+                placeholder="Last Name"
+              />
+            </div>
+            <div class="row">
+              <input
+                formControlName="userName"
+                type="text"
+                name="username"
+                class="form__input"
+                placeholder="User Name"
+              />
+              <small class="msg"></small>
+            </div>
+            <div class="row">
+              <input
+                formControlName="email"
+                type="text"
+                name="email"
+                class="form__input"
+                placeholder="Email Id"
+              />
+            </div>
+            <div class="row">
+              <input
+                formControlName="mobile"
+                type="text"
+                name="mob"
+                class="form__input"
+                placeholder="Mobile Number"
+              />
+            </div>
+
+            <div class="row">
+              <input
+                formControlName="password"
+                type="password"
+                name="password"
+                class="form__input"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="row">
+              <input
+                formControlName="confirmPassword"
+                type="password"
+                name="cpass"
+                class="form__input"
+                placeholder="Confirm Password"
+              />
+              <small *ngIf="isInvalid" class="msg"> {{ errorMessage }} </small>
+            </div>
+
+            <div class="row">
+              <button class="btn btn-success" id="login-btn" type="submit">
+                Create your account
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <p>Already have an account? <a routerLink="/login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
