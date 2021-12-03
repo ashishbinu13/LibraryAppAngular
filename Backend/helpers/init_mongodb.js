@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(
-    "mongodb+srv://userone:userone@myfiles.r6cjl.mongodb.net/libraryAppAngular?retryWrites=true&w=majority"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("mongodb connected");
   })
